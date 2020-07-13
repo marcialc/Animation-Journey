@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Website Tutorial using HTML / CSS / JavaScript</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="images/person.png" class="person">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/camera.png">
+                        <div>
+                            <h1>Camera</h1>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/processor.png">
+                        <div>
+                            <h1>Processor</h1>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/battery.png">
+                        <div>
+                            <h1>Battery</h1>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/gamer.png">
+                        <div>
+                            <h1>Gamer</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <img src="images/arrow.png" id="upBtn">
+                <h3>Features</h3>
+                <img src="images/arrow.png" id="downBtn">
+            </div>
+
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function()
+            {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            downBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+        </script>
+
+    </body>
+</html>
